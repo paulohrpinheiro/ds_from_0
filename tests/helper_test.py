@@ -3,6 +3,10 @@ import json
 
 
 class Fixtures:
+    def read_json_file(cls, filename):
+        with open(filename) as fp:
+            return json.load(fp)
+
     def __new__(cls):
         if not hasattr(cls, 'instance'):
             cls.instance = super().__new__(cls)
@@ -10,8 +14,10 @@ class Fixtures:
         return cls.instance
 
     def __init__(self):
-        with open('fixtures/user.json') as fp:
-            self.users = json.load(fp)
+        if not hasattr(self, 'users'):
+            self.users = self.read_json_file('fixtures/user.json')
 
-        with open('fixtures/friendship.json') as fp:
-            self.friendships = json.load(fp)
+        if not hasattr(self, 'friendships'):
+            self.friendships = self.read_json_file(
+                'fixtures/friendship.json'
+                )
