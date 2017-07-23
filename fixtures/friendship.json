@@ -1,0 +1,14 @@
+[
+    { "user": 0, "friend": 1 },
+    { "user": 0, "friend": 2 },
+    { "user": 1, "friend": 2 },
+    { "user": 1, "friend": 3 },
+    { "user": 2, "friend": 3 },
+    { "user": 3, "friend": 4 },
+    { "user": 4, "friend": 5 },
+    { "user": 5, "friend": 6 },
+    { "user": 5, "friend": 7 },
+    { "user": 6, "friend": 8 },
+    { "user": 7, "friend": 8 },
+    { "user": 8, "friend": 9 }
+]
