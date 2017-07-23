@@ -1,5 +1,3 @@
-from itertools import permutations, chain
-
 from . import helper_test
 
 from datascienter import user

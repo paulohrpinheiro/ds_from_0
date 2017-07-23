@@ -15,8 +15,8 @@ class User(UserList):
 
     def make_friend(self, user, friend):
         """Register a new friendship."""
-        self.friendships.append( {'user': user, 'friend': friend} )
-        self.friendships.append( {'user': friend, 'friend': user} )
+        self.friendships.append({'user': user, 'friend': friend})
+        self.friendships.append({'user': friend, 'friend': user})
 
     def friends(self, user_id):
         """Returns a friends list for a given user."""
