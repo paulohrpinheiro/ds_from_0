@@ -1,9 +1,11 @@
+import unittest
+
 from . import helper_test
 
 from datascienter import user
 
 
-class TestUser(helper_test.unittest.TestCase):
+class TestUser(unittest.TestCase):
     """Verify structure for data."""
 
     def setUp(self):

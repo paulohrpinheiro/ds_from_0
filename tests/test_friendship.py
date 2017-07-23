@@ -1,9 +1,11 @@
+import unittest
+
 from . import helper_test
 
 from datascienter import user
 
 
-class TestFriendship(helper_test.unittest.TestCase):
+class TestFriendship(unittest.TestCase):
     """Verify friendship fixture data."""
 
     def setUp(self):
