@@ -12,6 +12,8 @@ class TestFriendship(unittest.TestCase):
         """Get friendships array."""
         fixtures = helper_test.Fixtures()
         self.users = user.User()
+        [self.users.append(x) for x in fixtures.users]
+
         for friendship in fixtures.friendships:
             self.users.make_friend(friendship['user'], friendship['friend'])
 
