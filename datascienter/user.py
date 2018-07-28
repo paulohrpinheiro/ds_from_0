@@ -29,4 +29,4 @@ class User(UserList):
             for user in self.data
         ]
         num_friends_by_id = [(x[0], len(x[1])) for x in friends_by_id]
-        return num_friends_by_id
+        return sorted(num_friends_by_id, key=lambda x: x[1], reverse=True)
