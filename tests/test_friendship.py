@@ -38,9 +38,14 @@ class TestFriendship(unittest.TestCase):
         self.assertEqual(self.users.friendships, friendships)
 
     def test_how_many_friends(self):
-        """Test nymber of friends by user, the order is important."""
+        """Test nymber of friends by user. Order is important."""
         expected = [
             (1, 3), (2, 3), (3, 3), (5, 3), (8, 3),
             (0, 2), (4, 2), (6, 2), (7, 2), (9, 1),
         ]
         self.assertEqual(expected, self.users.how_many_friends())
+
+    def test_friends_of_friend_ids(self):
+        """Test list of common friends with a friend."""
+        expected = {0: 2, 5: 1}
+        self.assertEqual(expected, self.users.friends_of_friend_ids(3))
