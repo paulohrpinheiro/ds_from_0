@@ -20,4 +20,4 @@ class User(UserList):
 
     def friends(self, user_id):
         """Returns a friends list for a given user."""
-        return [x[1] for x in self.friendships if x[0] == user_id]
+        return [x['friend'] for x in self.friendships if x['user'] == user_id]
